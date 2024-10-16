@@ -1,0 +1,41 @@
+<wpml-config>
+    <admin-texts>
+        <key name="ct_theme_options">
+            <key name="h_introductory" />
+            <key name="h_phone_label" />
+            <key name="h_phone" />
+            <key name="h_phone_link" />
+            <key name="h_email_label" />
+            <key name="h_email" />
+            <key name="h_email_link" />
+            <key name="h_address_label" />
+            <key name="h_address" />
+            <key name="h_address_link" />
+            <key name="h_time_label" />
+            <key name="h_time_label2" />
+            <key name="h_time" />
+            <key name="h_time2" />
+            <key name="h_social_facebook_url" />
+            <key name="h_social_twitter_url" />
+            <key name="h_social_inkedin_url" />
+            <key name="h_social_instagram_url" />
+            <key name="h_social_google_url" />
+            <key name="h_social_skype_url" />
+            <key name="h_social_pinterest_url" />
+            <key name="h_social_vimeo_url" />
+            <key name="h_social_youtube_url" />
+            <key name="h_social_yelp_url" />
+            <key name="h_social_tumblr_url" />
+            <key name="h_social_tripadvisor_url" />
+            <key name="portfolio_slug" />
+            <key name="portfolio_name" />
+            <key name="portfolio_category_slug" />
+            <key name="portfolio_category_name" />
+            <key name="service_slug" />
+            <key name="service_name" />
+            <key name="service_category_slug" />
+            <key name="service_category_name" />
+            <key name="h_btn_text" />
+        </key>
+    </admin-texts>
+</wpml-config>
