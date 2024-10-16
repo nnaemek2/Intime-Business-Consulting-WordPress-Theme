@@ -1,0 +1,349 @@
+.bypostauthor {
+    display: block;
+}
+.comments-area {
+	.comment-list-wrap {
+		margin-top: 49px;
+	}
+	.comment-respond {
+		margin-top: 60px;
+		.logged-in-as {
+			margin-bottom: 25px;
+			font-size: 14px;
+			a {
+				color: inherit;
+				&:hover {
+					color: $primary_color;
+				}
+			}
+		}
+	}
+	.no-comments {
+		display: none;
+	}
+}
+.comment-title {
+	font-size: 20px;
+	text-transform: capitalize;
+	margin-bottom: 2px;
+	a {
+		color: inherit;
+		&:hover {
+			color: $primary_color;
+		}
+	}
+}
+.comment-list {
+	padding: 0;
+	list-style: none;
+	li {
+		.children {
+			padding-left: 76px;
+			@media #{$max-xs} {
+				padding-left: 0;
+			}
+			li {
+				list-style: none;
+				margin-top: 34px;
+			}
+		}
+		.comment-respond {
+			margin-top: 45px;
+			margin-bottom: 50px;
+			margin-left: 122px;
+		}
+	}
+	> li {
+		margin-bottom: 45px;
+		@media #{$max-xs} {
+			margin-bottom: 40px;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+		> .children > li > .children > li > .children > li > .children {
+			padding-left: 0;
+			.children {
+				padding-left: 0;
+			}
+		}
+	}
+}
+.comment-inner {
+	display: flex;
+	flex-wrap: nowrap;
+	@media #{$max-xs} {
+		display: block;
+		text-align: center;
+	}
+	img.avatar {
+		width: 102px;
+		height: 102px;
+		min-width: 102px;
+		margin-right: 25px;
+		float: left;
+		@include border-radius(100px);
+		border: 5px solid #fff;
+		@include box-shadow(0 8px 10px rgba($secondary_color, 0.23));
+		@media #{$max-sm} {
+			width: 60px;
+			height: 60px;
+			min-width: 60px;
+			margin-right: 18px;
+		}
+		@media #{$max-xs} {
+			float: none;
+			margin: 0 auto 22px auto;
+			width: 92px;
+			height: 92px;
+			min-width: 92px;
+		}
+	}
+}
+.comment-date {
+	font-size: 13px;
+	color: $primary_color;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 17px;
+	display: inline-block;
+	@include transition(all 300ms linear 0ms);
+}
+.comment-content {
+	background-color: #fff;
+	padding: 22px 24px 38px;
+	position: relative;
+	flex-grow: 1;
+	@include transition(.3s cubic-bezier(.24,.74,.58,1));
+	border: 1px solid #eeecec;
+	@media #{$max-sm} {
+		padding-top: 26px;
+	}
+	a {
+	    word-wrap: break-word;
+	}
+	.comment-text {
+		color: inherit;
+		font-size: 15px;
+		line-height: 27px;
+		p:last-child {
+			margin-bottom: 0;
+		}
+		ol, ul {
+			margin-bottom: 32px;
+			ul, ol {
+				margin-bottom: 0;
+			}
+		}
+		ul li {
+			list-style: outside;
+		}
+		br {
+			display: none;
+		}
+	}
+	&:hover {
+		@include box-shadow(0 8px 38px rgba(#7d7d7d, 0.16));
+		border-color: #fff;
+		.comment-date {
+			text-decoration: underline;
+		}
+		.comment-reply a {
+			&:before {
+				opacity: 0;
+			}
+			&:after {
+				opacity: 1;
+			}
+			&:hover {
+				&:before {
+					opacity: 1;
+				}
+				&:after {
+					opacity: 0;
+				}
+			}
+		}
+	}
+	@media #{$max-xs} {
+		&:before {
+			content: '';
+			border-width: 12px;
+			border-style: solid;
+			border-color: transparent transparent #f4f7fc transparent;
+			left: 50%;
+			top: -23px;
+			@include transform(translate(-50%, 0));
+			display: inline-block;
+			position: absolute;
+		}
+	}
+}
+.comment-reply {
+	position: absolute;
+	top: 20px;
+	right: 23px;
+	@media #{$max-xs} {
+		position: static;
+		margin-top: 22px;
+	}
+	a {
+		line-height: 35px;
+		display: inline-block;
+		padding: 0 17px;
+		font-size: 13px;
+		color: #fff;
+		text-transform: uppercase;
+		@include border-radius(0px);
+		background-color: $secondary_color;
+		letter-spacing: 0.05em;
+		i {
+			margin-left: 4px;
+		}
+		&:hover {
+			background-color: $primary_color;
+			color: #fff;
+		}
+	}
+}
+.comment-reply-title small {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: -5px;
+	margin-left: 10px;
+	a {
+		line-height: 35px;
+		display: inline-block;
+		padding: 0 22px;
+		font-size: 13px;
+		font-weight: 600;
+		color: #fff;
+		@include border-radius(0px);
+    	background-color: $primary_color;
+		i {
+			margin-left: 4px;
+		}
+		&:hover {
+	      color: #fff;
+	      background-color: $secondary_color;
+	    }
+	}
+}
+.comment-holder {
+	display: flex;
+	flex-wrap: nowrap;
+	margin-top: 5px;
+	.comment-meta {
+		flex-grow: 1;
+		margin-right: 30px;
+	}
+	@media #{$max-xs} {
+		display: block;
+		margin-top: 0;
+		margin-bottom: 14px;
+		.comment-meta {
+			margin-right: 0;
+		}
+	}
+}
+.comment-form {
+	.row {
+		> div {
+			margin-top: 30px;
+		}
+	}
+	.form-submit {
+		margin-top: 23px;
+		margin-bottom: 0;
+	}
+	.comment-form-comment {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+.comment-form-cookies-consent {
+	font-size: 14px;
+	line-height: 24px;
+	padding-left: 20px;
+	position: relative;
+	margin-top: 20px;
+	color: $dark_color;
+	font-weight: 700;
+	input, label:before, label:after {
+		position: absolute;
+		width: 12px;
+		height: 12px;
+		left: 0;
+		top: 6px;
+	}
+	label:before {
+		content: '';
+		border: 1px solid #b7bccc;
+		background-color: #ececec;
+		z-index: 1;
+	}
+	label:after {
+		content: '\f00c';
+		font-family: "Font Awesome 5 Pro";
+		font-weight: 400;
+		z-index: 2;
+		font-size: 8px;
+		color: $primary_color;
+		opacity: 0;
+		line-height: 12px;
+		text-align: center;
+	}
+	input {
+		z-index: 99;
+		opacity: 0;
+		&:checked + label:before {
+			border-color: $primary_color;
+			background-color: #fff;
+		}
+		&:checked + label:after {
+			opacity: 1;
+		}
+	}
+}
+.page-template-default .comments-area .comment-respond {
+	border-top: 1px solid #d0e7fa !important;
+	padding-top: 50px;
+	margin-top: 50px;
+	&:before {
+		display: none;
+	}
+}
+
+#commentform {
+	padding: 35px 33px 35px 33px;
+	background-color: #fff;
+	@media #{$max-sm} {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+.comments-title, .comment-reply-title {
+  font-size: 24px;
+  margin-bottom: 30px;
+  padding-right: 33px;
+  position: relative;
+  display: inline-block;
+  &:before {
+    content: '';
+    width: 24px;
+    height: 2px;
+    background-color: $primary_color;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    @include transform(translate(0, -50%));
+  }
+}
+.comments-title {
+    margin-bottom: 37px;
+}
+
+.page-template-default #commentform {
+	box-shadow: 0 0 12px rgba(0,0,0,0.06);
+}
